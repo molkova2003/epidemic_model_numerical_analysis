@@ -1,0 +1,51 @@
+# Newton and Fixed-Point Iteration for an Epidemic Final Size Model
+
+## Overview
+This project applies numerical methods to solve a nonlinear equation arising in an epidemic final-size model.
+
+I implemented **Newton’s method** and **fixed-point iteration** in Python and compared their convergence behavior for different values of the basic reproduction number \(R_0\), different initial guesses, and different vaccination rates.
+
+## Methods Used
+- Newton’s method
+- Fixed-point iteration
+- Empirical order of convergence (EOC)
+- Asymptotic convergence constant
+
+## Mathematical Context
+The model studies the final epidemic size using equations involving the reproduction number \(R_0\).
+I analyzed:
+- how convergence changes with different values of \(R_0\)
+- sensitivity to the starting value \(p_0\)
+- how vaccination affects the final epidemic size
+
+## Project Structure
+- `main.py` – runs the numerical experiments
+- `methods/newton.py` – Newton’s method implementation
+- `methods/fixed_point.py` – fixed-point iteration implementation
+- `model/equations.py` – model equations and derivatives
+- `analysis/convergence.py` – empirical convergence calculations
+- `utils/format_output.py` – formats iteration results as tables
+
+## Tools
+- Python
+- NumPy
+- pandas
+
+## Key Results
+- Newton’s method converged quickly across multiple parameter choices
+- Fixed-point iteration converged more slowly, consistent with linear convergence
+- Empirical convergence results matched theoretical expectations
+- Increasing vaccination reduced the final epidemic size in the model
+
+## What I Learned
+This project helped me strengthen my understanding of:
+- iterative numerical methods
+- convergence analysis
+- nonlinear equations
+- translating mathematical ideas into code
+
+## How to Run
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
